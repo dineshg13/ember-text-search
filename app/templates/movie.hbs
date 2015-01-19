@@ -1,0 +1,13 @@
+{{input type="text" class="search" placeholder="Search Movies" value=searchText action="query"}}
+<ul>
+	<h4>Results</h4>
+	{{#each item in searchResults}}
+	<li>{{item.name}}</li>
+	{{else}}
+		{{#if searchText }}
+			<li>Aw, shucks. Couldn't find nothin'</li>
+		{{/if}}
+	{{/each}}
+</ul>
+
+{{outlet}}
